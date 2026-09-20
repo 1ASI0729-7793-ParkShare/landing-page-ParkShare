@@ -4,4 +4,27 @@
     gap: var(--space-16);
 }
 
+/* ==========================================================================
+   SPLIT VIEW: MAP & PARKING CARDS (Section 4.1.2)
+   ========================================================================== */
+.split-section {
+    background: #F1F5F9;
+}
+
+.split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: var(--space-24);
+    align-items: start;
+}
+
+.cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    max-height: 560px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
 
