@@ -70,4 +70,55 @@
     margin-bottom: var(--space-8);
 }
 
+.price-tag {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-dark-green);
+}
+
+/* Simulated Interactive Map */
+.map-container {
+    background: #E2E8F0;
+    border-radius: var(--radius-md);
+    height: 560px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #CBD5E1;
+    box-shadow: var(--shadow-sm);
+}
+
+.map-bg {
+    width: 100%;
+    height: 100%;
+    background-image:
+            radial-gradient(#94A3B8 1px, transparent 1px),
+            linear-gradient(to right, #CBD5E1 1px, transparent 1px),
+            linear-gradient(to bottom, #CBD5E1 1px, transparent 1px);
+    background-size: 20px 20px, 60px 60px, 60px 60px;
+    background-color: #E2E8F0;
+    position: absolute;
+}
+
+.map-pin {
+    position: absolute;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 2px solid var(--color-lime-green);
+}
+.map-pin:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    background: var(--color-primary-intense);
+}
+
 
