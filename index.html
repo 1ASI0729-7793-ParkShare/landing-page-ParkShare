@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Meta Tags (Section 4.2.3) -->
+  <title id="meta-title">Proyect-Park-Share | Your Private Parking Network in Lima</title>
+  <meta name="description" id="meta-desc" content="Forget traffic and find secure parking by the hour or rent out your empty parking space to earn extra money.">
+  <meta name="keywords" content="parqueo en lima, estacionamiento por hora, alquilar mi cochera, estacionamiento privado, parqueo seguro, parkshare, parking lima">
+  <meta name="author" content="Equipo Proyect-Park-Share">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Proyect-Park-Share | Tu Red de Cocheras Privadas">
+  <meta property="og:description" content="Busca un estacionamiento seguro por horas o rentabiliza tu cochera.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter (Section 4.1.1 Typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR  —  logo | menú centrado | idioma + acceso
+       ========================================================================== -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+
+      <a href="#" class="logo">
+        <span class="logo-icon" aria-hidden="true">P</span>
+        <span class="logo-text">Proyect-Park-Share</span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#search-section" data-i18n="nav.search">Search</a></li>
+          <li><a href="#how-it-works" data-i18n="nav.howItWorks">How it works</a></li>
+          <li><a href="#video-showcase" data-i18n="nav.videos">Media &amp; Demos</a></li>
+          <li><a href="#team" data-i18n="nav.team">Team</a></li>
+          <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="#calculator" data-i18n="nav.calculator">Calculator</a></li>
+          <li><a href="#verification" data-i18n="nav.verification">Verification</a></li>
+        </ul>
+
+        <!-- Solo visibles dentro del menú móvil -->
+        <div class="nav-panel-actions">
+          <button type="button" class="btn btn-outline" onclick="openModal('login-modal')" data-i18n="btn.login">Log In</button>
+          <button type="button" class="btn btn-primary" onclick="openModal('register-modal')" data-i18n="btn.register">Register Now</button>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-switcher-pill" id="lang-toggle-btn" aria-label="Switch language / Cambiar idioma" title="Switch Language / Cambiar Idioma">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-option active" id="lang-en">EN</span>
+          <span class="lang-divider" aria-hidden="true">/</span>
+          <span class="lang-option" id="lang-es">ES</span>
+        </button>
+
+        <button type="button" class="btn btn-outline btn-nav" onclick="openModal('login-modal')" data-i18n="btn.login">Log In</button>
+        <button type="button" class="btn btn-primary btn-nav" onclick="openModal('register-modal')" data-i18n="btn.register">Register Now</button>
+
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu" data-i18n-aria="nav.menu">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="role-toggle">
+          <button class="role-btn active" id="btn-role-driver" onclick="setRole('driver')" data-i18n="role.driver">I'm a Driver</button>
+          <button class="role-btn" id="btn-role-owner" onclick="setRole('owner')" data-i18n="role.owner">I'm a Parking Owner</button>
+        </div>
+
+        <h1 id="hero-title" data-i18n="hero.driverTitle">Find secure parking in Lima or rent out your garage easily</h1>
+        <p id="hero-desc" data-i18n="hero.driverDesc">Connect with nearby verified garage owners. Book by the hour, save time, and park safely with transparent pricing.</p>
+        
+        <div style="display: flex; gap: var(--space-16);">
+          <a href="#search-section" class="btn btn-primary" style="background-color: var(--color-lime-green); color: var(--color-primary-dark);" data-i18n="hero.ctaPrimary">Book Now</a>
+          <a href="#how-it-works" class="btn btn-outline" style="color: white; border-color: white;" data-i18n="hero.ctaSecondary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Quick Finder Box -->
+      <div class="search-card">
+        <h3 style="margin-bottom: var(--space-16); color: var(--color-primary-dark);" data-i18n="searchCard.title">Quick Garage Finder</h3>
+        <form onsubmit="event.preventDefault(); triggerSearch();">
+          <div class="form-group">
+            <label data-i18n="searchCard.locationLabel">District or Avenue in Lima</label>
+            <input type="text" class="form-control" id="search-input" placeholder="e.g. Av. Javier Prado, Miraflores..." value="Miraflores">
+          </div>
+          
+          <div class="search-grid-inputs">
+            <div class="form-group">
+              <label data-i18n="searchCard.vehicleLabel">Vehicle Type</label>
+              <select class="form-control" id="vehicle-type">
+                <option data-i18n="vehicle.compact">Compact Sedan</option>
+                <option data-i18n="vehicle.suv">SUV / Pickup</option>
+                <option data-i18n="vehicle.moto">Motorcycle</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="searchCard.priceLabel">Max Price / Hr</label>
+              <select class="form-control">
+                <option>S/. 10 / hr</option>
+                <option>S/. 8 / hr</option>
+                <option>S/. 5 / hr</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;" data-i18n="searchCard.btnSearch">Search Parking Spaces</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SPLIT VIEW: MAP & PARKING CARDS
+       ========================================================================== -->
+  <section class="split-section" id="search-section">
+    <div class="container">
+      <div style="margin-bottom: var(--space-24);">
+        <h2 data-i18n="split.title">Available Parking Spaces Nearby</h2>
+        <p data-i18n="split.subtitle">Real-time dynamic map and parking cards with instant reservation options.</p>
+      </div>
+
+      <div class="split-grid">
+        <!-- Cards List -->
+        <div class="cards-list" id="parking-cards-container">
+          <!-- Parking Card 1 -->
+          <div class="parking-card" onclick="highlightPin(1)">
+            <div class="parking-img">PHOTO / GARAGE</div>
+            <div class="parking-info">
+              <div class="parking-header">
+                <div>
+                  <h3 style="font-size: 16px;">Cochera Privada Javier Prado</h3>
+                  <p style="font-size: 13px; color: #64748B;">Av. Javier Prado Este 2450, San Borja</p>
+                </div>
+                <span class="price-tag">S/. 6.00 <span style="font-size: 11px; color:#64748B;">/hr</span></span>
+              </div>
+              <div style="display: flex; gap: 8px; margin: 8px 0;">
+                <span class="badge badge-available" data-i18n="badge.available">Available</span>
+                <span class="badge" style="background:#E2E8F0; color:#334155;">24/7 Surveillance</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+                <span style="font-size: 12px; color: #047857; font-weight: 600;">★ 4.9 (28 reviews)</span>
+                <button class="btn btn-primary" style="padding: 6px 14px; font-size: 13px;" onclick="bookParking('Cochera Privada Javier Prado')" data-i18n="btn.bookNow">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parking Card 2 -->
+          <div class="parking-card" onclick="highlightPin(2)">
+            <div class="parking-img">PHOTO / GARAGE</div>
+            <div class="parking-info">
+              <div class="parking-header">
+                <div>
+                  <h3 style="font-size: 16px;">Estacionamiento Techado Larco</h3>
+                  <p style="font-size: 13px; color: #64748B;">Av. José Larco 780, Miraflores</p>
+                </div>
+                <span class="price-tag">S/. 8.50 <span style="font-size: 11px; color:#64748B;">/hr</span></span>
+              </div>
+              <div style="display: flex; gap: 8px; margin: 8px 0;">
+                <span class="badge badge-available" data-i18n="badge.available">Available</span>
+                <span class="badge" style="background:#E2E8F0; color:#334155;">Automatic Gate</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+                <span style="font-size: 12px; color: #047857; font-weight: 600;">★ 4.8 (45 reviews)</span>
+                <button class="btn btn-primary" style="padding: 6px 14px; font-size: 13px;" onclick="bookParking('Estacionamiento Techado Larco')" data-i18n="btn.bookNow">Book Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parking Card 3 -->
+          <div class="parking-card" onclick="highlightPin(3)">
+            <div class="parking-img">PHOTO / GARAGE</div>
+            <div class="parking-info">
+              <div class="parking-header">
+                <div>
+                  <h3 style="font-size: 16px;">Cochera Residencial Universitaria</h3>
+                  <p style="font-size: 13px; color: #64748B;">Cerca a UPC / Campus Surco</p>
+                </div>
+                <span class="price-tag">S/. 5.00 <span style="font-size: 11px; color:#64748B;">/hr</span></span>
+              </div>
+              <div style="display: flex; gap: 8px; margin: 8px 0;">
+                <span class="badge badge-pending" data-i18n="badge.pending">1 spot left</span>
+                <span class="badge" style="background:#E2E8F0; color:#334155;">Compact Auto</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+                <span style="font-size: 12px; color: #047857; font-weight: 600;">★ 5.0 (12 reviews)</span>
+                <button class="btn btn-primary" style="padding: 6px 14px; font-size: 13px;" onclick="bookParking('Cochera Residencial Universitaria')" data-i18n="btn.bookNow">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulated Interactive Map -->
+        <div class="map-container">
+          <div class="map-bg"></div>
+          
+          <!-- Map Pins -->
+          <div class="map-pin" id="pin-1" style="top: 25%; left: 35%;" onclick="bookParking('Cochera Privada Javier Prado')">
+            <span>📍 S/. 6.00</span>
+          </div>
+
+          <div class="map-pin" id="pin-2" style="top: 55%; left: 60%;" onclick="bookParking('Estacionamiento Techado Larco')">
+            <span>📍 S/. 8.50</span>
+          </div>
+
+          <div class="map-pin" id="pin-3" style="top: 75%; left: 25%;" onclick="bookParking('Cochera Residencial Universitaria')">
+            <span>📍 S/. 5.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VIDEO SHOWCASE SECTION (Custom UI requested)
+       ========================================================================== -->
+  <section class="videos-section" id="video-showcase">
+    <div class="container">
+      <h2 class="section-title-dark" data-i18n="videos.heading">Platform Video Demonstrations & Case Studies</h2>
+
+      <div class="videos-grid">
+        
+        <!-- Video Player Card 1: ACME Industries / About the Team -->
+        <div class="video-card">
+          <div class="video-header-bar">
+            <div><span class="video-live-dot"></span><span data-i18n="video1.headerLeft">ABOUT-THE-TEAM VIDEO</span></div>
+            <div>1080P HD · ACME INDUSTRIES</div>
+          </div>
+
+          <div class="video-screen-body">
+            <div class="play-btn-large" onclick="playDemoVideo('ACME Industries - About the Team')"></div>
+            <div class="video-subtitle">ACME INDUSTRIES · SOFTWARE ENGINEERING</div>
+            <h3 class="video-title" data-i18n="video1.title">About the Team: Development Process & Urban Vision</h3>
+            <p class="video-description" data-i18n="video1.desc">A comprehensive walkthrough of our agile team dynamics, sprint iterations, geospatial architecture, and collaborative urban parking validation.</p>
+          </div>
+
+          <div class="video-meta-footer">
+            <div class="meta-group">
+              <div class="meta-item">
+                <span class="meta-label" data-i18n="video.duration">DURATION</span>
+                <span class="meta-val">03:30 min</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label" data-i18n="video.methodology">METHODOLOGY</span>
+                <span class="meta-val">Scrum & Lean UX</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label" data-i18n="video.specialization">SPECIALIZATION</span>
+                <span class="meta-val">Web & Smart Mobility</span>
+              </div>
+            </div>
+            <a href="#" class="video-link" onclick="event.preventDefault(); playDemoVideo('ACME Industries')"><span data-i18n="video1.link">Explore team profile & mission</span> &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Video Player Card 2: ParkShare / Official Demo -->
+        <div class="video-card">
+          <div class="video-header-bar">
+            <div><span class="video-live-dot"></span><span data-i18n="video2.headerLeft">OFFICIAL DEMO VIDEO</span></div>
+            <div>4K UHD · PARKSHARE PROTOCOL</div>
+          </div>
+
+          <div class="video-screen-body">
+            <div class="play-btn-large" onclick="playDemoVideo('ParkShare Official Presentation')"></div>
+            <div class="video-subtitle">PARKSHARE PLATFORM · URBAN ECOSYSTEM</div>
+            <h3 class="video-title" data-i18n="video2.title">ParkShare: Official Presentation and Needs Validation</h3>
+            <p class="video-description" data-i18n="video2.desc">Interviews with garage owners, city drivers, and an end-to-end real-time reservation & verification telemetry demonstration.</p>
+          </div>
+
+          <div class="video-meta-footer">
+            <div class="meta-group">
+              <div class="meta-item">
+                <span class="meta-label" data-i18n="video.duration">DURATION</span>
+                <span class="meta-val">04:45 min</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label" data-i18n="video.validation">VALIDATION</span>
+                <span class="meta-val">On-site Field Tests</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label" data-i18n="video.standard">STANDARD</span>
+                <span class="meta-val">Real-Time Telemetry</span>
+              </div>
+            </div>
+            <a href="#" class="video-link" onclick="event.preventDefault(); playDemoVideo('ParkShare Demo')"><span data-i18n="video2.link">Request a personalized demo</span> &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
