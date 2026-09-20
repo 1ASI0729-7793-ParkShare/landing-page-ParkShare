@@ -370,4 +370,55 @@
     flex: 1;
 }
 
+.pricing-features li {
+    font-size: 14px;
+    color: var(--color-dark-gray);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    color: var(--color-lime-green);
+    font-weight: 800;
+}
+
+/* ==========================================================================
+   PROCESS TIMELINE (Section 4.1.2 Flow rules)
+   ========================================================================== */
+.timeline-section {
+    background: var(--color-white);
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-24);
+    position: relative;
+    margin-top: var(--space-32);
+}
+
+.timeline-card {
+    background: var(--color-light-bg);
+    border-radius: var(--radius-md);
+    padding: var(--space-24);
+    border: 1px solid #E2E8F0;
+    position: relative;
+}
+
+.timeline-step {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: var(--space-16);
+}
+
 
