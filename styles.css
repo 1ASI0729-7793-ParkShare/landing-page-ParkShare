@@ -421,4 +421,44 @@
     margin-bottom: var(--space-16);
 }
 
+/* ==========================================================================
+   OWNER CALCULATOR MODULE
+   ========================================================================== */
+.calc-section {
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+    border-radius: var(--radius-lg);
+    padding: var(--space-32);
+    margin: var(--space-32) 0;
+    border: 1px solid #CBD5E1;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+    align-items: center;
+}
+
+.calc-box {
+    background: var(--color-white);
+    padding: var(--space-24);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.calc-result-box {
+    background: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: var(--space-32);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.calc-amount {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--color-lime-green);
+    margin: 12px 0;
+}
+
 
