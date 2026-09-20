@@ -121,4 +121,36 @@
     background: var(--color-primary-intense);
 }
 
+/* ==========================================================================
+   VIDEO SHOWCASE SECTION (Custom styling based on provided screenshots)
+   ========================================================================== */
+.videos-section {
+    background-color: #0B132B;
+    color: var(--color-white);
+    padding: 60px 0;
+}
+
+.section-title-dark {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: var(--space-32);
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+}
+
+.video-card {
+    background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
 
