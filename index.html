@@ -305,6 +305,391 @@
           </div>
         </div>
 
+
+
       </div>
     </div>
   </section>
+
+  
+==========================================================================
+       PRICING & PLANS SECTION
+       ==========================================================================
+       
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 data-i18n="pricing.title">Transparent Pricing & Flexible Plans</h2>
+        <p data-i18n="pricing.subtitle">Choose the perfect plan whether you are looking for hourly parking or monetizing your garage space.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Card 1: Pay As You Go -->
+        <div class="pricing-card-ui">
+          <h3 class="pricing-title" data-i18n="pricing.plan1Title">Pay As You Go</h3>
+          <p class="pricing-desc" data-i18n="pricing.plan1Desc">Ideal for occasional drivers who need fast parking without commitments.</p>
+          <div class="pricing-amount">S/. 5.00 <span>/ hr avg</span></div>
+          <ul class="pricing-features">
+            <li data-i18n="pricing.plan1Feat1">Instant map search and booking</li>
+            <li data-i18n="pricing.plan1Feat2">Pay strictly for time used</li>
+            <li data-i18n="pricing.plan1Feat3">Standard customer support</li>
+            <li data-i18n="pricing.plan1Feat4">Verified garage security</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;" onclick="openModal('register-modal')" data-i18n="btn.register">Get Started</button>
+        </div>
+
+        <!-- Card 2: Driver Pass (Featured) -->
+        <div class="pricing-card-ui featured">
+          <div class="pricing-badge-popular" data-i18n="pricing.popularBadge">Most Popular</div>
+          <h3 class="pricing-title" data-i18n="pricing.plan2Title">Driver Pass</h3>
+          <p class="pricing-desc" data-i18n="pricing.plan2Desc">Designed for daily commuters seeking reduced hourly rates and priority spots.</p>
+          <div class="pricing-amount">S/. 29.90 <span>/ month</span></div>
+          <ul class="pricing-features">
+            <li data-i18n="pricing.plan2Feat1">15% discount on all hourly rates</li>
+            <li data-i18n="pricing.plan2Feat2">Priority reservation queue</li>
+            <li data-i18n="pricing.plan2Feat3">Zero booking service fees</li>
+            <li data-i18n="pricing.plan2Feat4">24/7 Premium customer care</li>
+          </ul>
+          <button class="btn btn-primary" style="width: 100%;" onclick="openModal('register-modal')" data-i18n="pricing.btnSubscribe">Subscribe Now</button>
+        </div>
+
+        <!-- Card 3: Garage Partner -->
+        <div class="pricing-card-ui">
+          <h3 class="pricing-title" data-i18n="pricing.plan3Title">Garage Owner</h3>
+          <p class="pricing-desc" data-i18n="pricing.plan3Desc">For property owners looking to turn unused space into steady passive income.</p>
+          <div class="pricing-amount">0% <span>monthly fee</span></div>
+          <ul class="pricing-features">
+            <li data-i18n="pricing.plan3Feat1">Free listing and automated scheduling</li>
+            <li data-i18n="pricing.plan3Feat2">Automated direct bank payouts</li>
+            <li data-i18n="pricing.plan3Feat3">Verified driver identification</li>
+            <li data-i18n="pricing.plan3Feat4">Coverage & incident protection</li>
+          </ul>
+          <button class="btn btn-outline" style="width: 100%;" onclick="openModal('register-modal')" data-i18n="calc.btnPublish">List Garage Free</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HOW IT WORKS / TIMELINE (Section 4.1.2)
+       ========================================================================== -->
+  <section class="timeline-section" id="how-it-works">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 data-i18n="timeline.title">Simple Step-by-Step Flow</h2>
+        <p data-i18n="timeline.subtitle">Our system guides you continuously with transparent real-time state rules.</p>
+      </div>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="timeline-step">1</div>
+          <h3 style="margin-bottom: 8px;" data-i18n="timeline.step1Title">Requested</h3>
+          <p style="font-size: 14px; color: #64748B;" data-i18n="timeline.step1Desc">Select a garage on the map, choose your timeframe, and send the request.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-step">2</div>
+          <h3 style="margin-bottom: 8px;" data-i18n="timeline.step2Title">Confirmed</h3>
+          <p style="font-size: 14px; color: #64748B;" data-i18n="timeline.step2Desc">The owner receives the instant notification and secures your spot.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-step">3</div>
+          <h3 style="margin-bottom: 8px;" data-i18n="timeline.step3Title">In Use</h3>
+          <p style="font-size: 14px; color: #64748B;" data-i18n="timeline.step3Desc">Park safely. The timer runs only while your vehicle is inside.</p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-step">4</div>
+          <h3 style="margin-bottom: 8px;" data-i18n="timeline.step4Title">Finished</h3>
+          <p style="font-size: 14px; color: #64748B;" data-i18n="timeline.step4Desc">Confirm exit, automatic secure payment release, and mutual review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INCOME CALCULATOR FOR OWNERS
+       ========================================================================== -->
+  <section id="calculator">
+    <div class="container">
+      <div class="calc-section">
+        <div class="calc-grid">
+          <div>
+            <h2 data-i18n="calc.title">Calculate Your Monthly Earnings as an Owner</h2>
+            <p style="margin-top: 8px; color: #4B5563;" data-i18n="calc.subtitle">Turn your empty garage into passive income in Lima.</p>
+            
+            <div class="calc-box" style="margin-top: 20px;">
+              <div class="form-group">
+                <label data-i18n="calc.hoursLabel">Available Hours per Day</label>
+                <input type="range" id="calc-hours" min="1" max="16" value="8" style="width: 100%;" oninput="updateCalculation()">
+                <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 14px; margin-top: 4px;">
+                  <span>1 hr</span>
+                  <span id="hours-val" style="color: var(--color-primary-intense);">8 hours / day</span>
+                  <span>16 hrs</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label data-i18n="calc.priceLabel">Hourly Rate (S/.)</label>
+                <input type="range" id="calc-price" min="4" max="15" value="6" style="width: 100%;" oninput="updateCalculation()">
+                <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 14px; margin-top: 4px;">
+                  <span>S/. 4</span>
+                  <span id="price-val" style="color: var(--color-primary-intense);">S/. 6.00 / hr</span>
+                  <span>S/. 15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-result-box">
+            <h3 style="color: #94A3B8; font-size: 16px;" data-i18n="calc.resultTitle">ESTIMATED MONTHLY EARNINGS</h3>
+            <div class="calc-amount" id="calc-result">S/. 1,008.00</div>
+            <p style="font-size: 13px; color: #CBD5E1; margin-bottom: 20px;" data-i18n="calc.resultSubtitle">Based on 21 days per month availability.</p>
+            <button class="btn btn-primary" style="background: var(--color-lime-green); color: var(--color-primary-dark);" onclick="openModal('register-modal')" data-i18n="calc.btnPublish">Publish My Garage Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VERIFICATION SECTION (Section 4.2.1)
+       ========================================================================== -->
+  <section class="verification-section" id="verification">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 data-i18n="verif.title">Trust & Document Verification</h2>
+        <p data-i18n="verif.subtitle">Every user and garage is verified to ensure maximum security for community members.</p>
+      </div>
+
+      <div class="verif-grid">
+        <div class="verif-card">
+          <div class="upload-icon">🪪</div>
+          <h3 data-i18n="verif.doc1Title">National ID / DNI</h3>
+          <p style="font-size: 13px; color: #64748B; margin: 8px 0 16px 0;" data-i18n="verif.doc1Desc">Verifies official identity of both drivers and garage owners.</p>
+          <button class="btn btn-outline" style="font-size: 12px; padding: 6px 12px;" onclick="simulateUpload('DNI / ID Document')" data-i18n="verif.btnUpload">Upload Document</button>
+        </div>
+
+        <div class="verif-card">
+          <div class="upload-icon">🚘</div>
+          <h3 data-i18n="verif.doc2Title">Driver's License & Plate</h3>
+          <p style="font-size: 13px; color: #64748B; margin: 8px 0 16px 0;" data-i18n="verif.doc2Desc">Confirms authorized driver and registered vehicle plate.</p>
+          <button class="btn btn-outline" style="font-size: 12px; padding: 6px 12px;" onclick="simulateUpload('Driver License')" data-i18n="verif.btnUpload">Upload Document</button>
+        </div>
+
+        <div class="verif-card">
+          <div class="upload-icon">🏡</div>
+          <h3 data-i18n="verif.doc3Title">Property Title or Utility Bill</h3>
+          <p style="font-size: 13px; color: #64748B; margin: 8px 0 16px 0;" data-i18n="verif.doc3Desc">Ensures the garage owner is legitimate and authorized.</p>
+          <button class="btn btn-outline" style="font-size: 12px; padding: 6px 12px;" onclick="simulateUpload('Property Document')" data-i18n="verif.btnUpload">Upload Document</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TEAM SECTION
+       ========================================================================== -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <div class="team-intro">
+        <p class="team-eyebrow" data-i18n="team.eyebrow">THE PEOPLE BEHIND PARKSHARE</p>
+        <h2 data-i18n="team.title">Meet our team</h2>
+        <p data-i18n="team.subtitle">A multidisciplinary team working to make parking in Lima simpler, safer, and more accessible.</p>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="images/Daril.png" alt="Portrait of Daril Palomino" loading="lazy">
+          <div class="team-card-content">
+            <h3>Daril Johan Palomino Vilcañaupa</h3>
+            <p class="team-role">Software Engineer</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <img src="images/Fabrizio2.png" alt="Portrait of Fabrizio Tello" loading="lazy">
+          <div class="team-card-content">
+            <h3>Fabrizio Rafael Tello Palacios</h3>
+            <p class="team-role">Software Engineer</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <img src="images/Gabriel.png" alt="Portrait of Gabriel Yanac" loading="lazy">
+          <div class="team-card-content">
+            <h3>Gabriel Stefano Yanac Flores</h3>
+            <p class="team-role">Software Engineer</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <img src="images/Oscar.jpg" alt="Portrait of Oscar Checa" loading="lazy">
+          <div class="team-card-content">
+            <h3>Oscar Diego Checa Burga</h3>
+            <p class="team-role">Software Engineer</p>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <img src="images/Mateo.jpg" alt="Portrait of Mateo Urviola" loading="lazy">
+          <div class="team-card-content">
+            <h3>Mateo Sebastián Urviola Condori</h3>
+            <p class="team-role">Software Engineer</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ SECTION
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: var(--space-32);" data-i18n="faq.title">Frequently Asked Questions</h2>
+      <div style="max-width: 800px; margin: 0 auto;">
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span data-i18n="faq.q1">How is the hourly fee calculated?</span> <span>+</span></div>
+          <div class="faq-answer" data-i18n="faq.a1">The fee is clearly displayed on the card and map prior to confirmation. Billing starts when your vehicle entry is verified and stops upon departure.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span data-i18n="faq.q2">What happens if my vehicle exceeds the garage size?</span> <span>+</span></div>
+          <div class="faq-answer" data-i18n="faq.a2">Our flow rules automatically block reservations if your registered vehicle dimensions exceed the garage specifications set by the owner.</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span data-i18n="faq.q3">How do owners receive payments?</span> <span>+</span></div>
+          <div class="faq-answer" data-i18n="faq.a3">Earnings accumulate in your "My Earnings" balance and can be transferred directly to your bank account via the platform.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (SEO Tags & Architecture - Section 4.2.3)
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="color: white; margin-bottom: 12px;">
+            <div class="logo-icon" style="background: white; color: var(--color-primary-dark);">P</div>
+            <span>Proyect-Park-Share</span>
+          </div>
+          <p style="color: #94A3B8; font-size: 14px; max-width: 320px;" data-i18n="footer.desc">Connecting drivers and private garage owners in Lima through clarity, security, and operational speed.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col1">Navigation</h4>
+          <ul>
+            <li><a href="#search-section" data-i18n="nav.search">Search Parking</a></li>
+            <li><a href="#how-it-works" data-i18n="nav.howItWorks">How it works</a></li>
+            <li><a href="#video-showcase" data-i18n="nav.videos">Media & Demos</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#calculator" data-i18n="nav.calculator">Income Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2">Modules</h4>
+          <ul>
+            <li><a href="#" onclick="showToast('Section: My Bookings')" data-i18n="mod.bookings">My Bookings</a></li>
+            <li><a href="#" onclick="showToast('Section: My Garages')" data-i18n="mod.garages">My Garages</a></li>
+            <li><a href="#" onclick="showToast('Section: My Earnings')" data-i18n="mod.earnings">My Earnings</a></li>
+            <li><a href="#" onclick="showToast('Section: Verification')" data-i18n="mod.verification">Verification</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3">Contact & Legal</h4>
+          <ul>
+            <li><a href="#">support@parkshare.pe</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Lima, Perú</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Proyect-Park-Share. All rights reserved. Developed with clean design and user accessibility principles.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & TOASTS
+       ========================================================================== -->
+  <!-- Generic Action Modal -->
+  <div class="modal-overlay" id="action-modal">
+    <div class="modal-box">
+      <h3 id="modal-title" style="margin-bottom: 12px; color: var(--color-primary-dark);">Reserve Parking</h3>
+      <p id="modal-body" style="margin-bottom: 20px; color: #4B5563;">You are requesting a spot at this garage. Proceed to confirm?</p>
+      <div style="display: flex; gap: 12px; justify-content: flex-end;">
+        <button class="btn btn-secondary" onclick="closeModal('action-modal')" data-i18n="btn.cancel">Cancel</button>
+        <button class="btn btn-primary" id="modal-confirm-btn" onclick="confirmModalAction()" data-i18n="btn.confirm">Confirm Reservation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="login-modal">
+    <div class="modal-box">
+      <h3 style="margin-bottom: 16px; color: var(--color-primary-dark);" data-i18n="btn.login">Log In</h3>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="user@domain.com">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="••••••••">
+      </div>
+      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+        <button class="btn btn-secondary" onclick="closeModal('login-modal')" data-i18n="btn.cancel">Cancel</button>
+        <button class="btn btn-primary" onclick="closeModal('login-modal'); showToast('Successfully logged in!');" data-i18n="btn.login">Log In</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal-overlay" id="register-modal">
+    <div class="modal-box">
+      <h3 style="margin-bottom: 16px; color: var(--color-primary-dark);" data-i18n="btn.register">Register Now</h3>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" placeholder="Juan Pérez">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="user@domain.com">
+      </div>
+      <div class="form-group">
+        <label>Role</label>
+        <select class="form-control">
+          <option>Driver</option>
+          <option>Garage Owner</option>
+        </select>
+      </div>
+      <div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+        <button class="btn btn-secondary" onclick="closeModal('register-modal')" data-i18n="btn.cancel">Cancel</button>
+        <button class="btn btn-primary" onclick="closeModal('register-modal'); showToast('Account successfully created!');" data-i18n="btn.register">Register</button>
+      </div>
+    </div>
+  </div>
+
+      <!-- Toast Container -->
+      <div class="toast-container" id="toast-container"></div>
+
+       <!-- JavaScript (traducciones, calculadora, modales y navbar) -->
+      <script src="script.js" defer></script>
+  </body>
+</html>
+
+
+
+
