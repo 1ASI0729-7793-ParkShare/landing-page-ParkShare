@@ -253,4 +253,36 @@
     font-size: 12px;
 }
 
+.meta-group {
+    display: flex;
+    gap: 20px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+}
+.meta-label {
+    font-size: 10px;
+    color: #64748B;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.meta-val {
+    color: #E2E8F0;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.video-link {
+    color: #38BDF8;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.video-link:hover {
+    text-decoration: underline;
+}
+
 
