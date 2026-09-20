@@ -28,3 +28,46 @@
 }
 
 
+.parking-card {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-16);
+    display: flex;
+    gap: var(--space-16);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #E2E8F0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.parking-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-intense);
+}
+
+.parking-img {
+    width: 120px;
+    height: 100%;
+    min-height: 100px;
+    background: #CBD5E1;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748B;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.parking-info {
+    flex: 1;
+}
+
+.parking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-8);
+}
+
+
