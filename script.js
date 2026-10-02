@@ -1,12 +1,7 @@
-/* ==========================================================================
-   Proyect-Park-Share — Landing page
-   Lógica de la página (script.js). Se carga con `defer`: el DOM ya existe.
-   ========================================================================== */
+
 'use strict';
 
-/* --------------------------------------------------------------------------
-   1. TRADUCCIONES (EN / ES) — idioma por defecto: EN
-   -------------------------------------------------------------------------- */
+
 let currentLang = 'EN';
 let currentRole = 'driver';
 
@@ -267,9 +262,7 @@ const i18nData = {
   }
 };
 
-/* --------------------------------------------------------------------------
-   2. IDIOMA (EN / ES)
-   -------------------------------------------------------------------------- */
+
 const langToggleBtn = document.getElementById('lang-toggle-btn');
 const langEnLabel = document.getElementById('lang-en');
 const langEsLabel = document.getElementById('lang-es');
@@ -305,9 +298,7 @@ function updateLanguageUI() {
   updateCalculation();
 }
 
-/* --------------------------------------------------------------------------
-   3. ROL (CONDUCTOR / PROPIETARIO)
-   -------------------------------------------------------------------------- */
+
 function setRole(role) {
   currentRole = role;
   const isDriver = role === 'driver';
@@ -319,9 +310,7 @@ function setRole(role) {
   document.getElementById('hero-desc').textContent = t[isDriver ? 'hero.driverDesc' : 'hero.ownerDesc'];
 }
 
-/* --------------------------------------------------------------------------
-   4. CALCULADORA DE INGRESOS
-   -------------------------------------------------------------------------- */
+
 function updateCalculation() {
   const hours = parseInt(document.getElementById('calc-hours').value, 10);
   const price = parseFloat(document.getElementById('calc-price').value);
@@ -335,9 +324,7 @@ function updateCalculation() {
     `S/. ${monthlyEarnings.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
-/* --------------------------------------------------------------------------
-   5. MAPA Y BÚSQUEDA
-   -------------------------------------------------------------------------- */
+
 function highlightPin(id) {
   document.querySelectorAll('.map-pin').forEach(pin => { pin.style.transform = 'scale(1)'; });
   const activePin = document.getElementById(`pin-${id}`);
@@ -352,9 +339,7 @@ function triggerSearch() {
   showToast(currentLang === 'EN' ? `Searching garages in '${val}'...` : `Buscando cocheras en '${val}'...`);
 }
 
-/* --------------------------------------------------------------------------
-   6. MODALES Y NOTIFICACIONES (TOAST)
-   -------------------------------------------------------------------------- */
+
 let selectedGarageName = '';
 
 function bookParking(name) {
@@ -387,7 +372,6 @@ function showToast(msg) {
   toast.className = 'toast';
   toast.setAttribute('role', 'status');
 
-  // textContent (no innerHTML): el mensaje puede incluir texto escrito por el usuario
   const icon = document.createElement('span');
   icon.textContent = '🔔';
   const text = document.createElement('span');
@@ -413,9 +397,7 @@ function toggleFaq(el) {
   el.classList.toggle('active');
 }
 
-/* --------------------------------------------------------------------------
-   7. NAVBAR: menú móvil, sombra al hacer scroll y sección activa
-   -------------------------------------------------------------------------- */
+
 const header = document.getElementById('site-header');
 const nav = document.getElementById('primary-nav');
 const navToggle = document.getElementById('nav-toggle');
@@ -432,12 +414,12 @@ navToggle.addEventListener('click', () => {
   setMenu(navToggle.getAttribute('aria-expanded') !== 'true');
 });
 
-// Al elegir un enlace o un botón dentro del menú, se cierra
+
 nav.addEventListener('click', e => {
   if (e.target.closest('a, button')) setMenu(false);
 });
 
-// Clic fuera del header o tecla Escape también lo cierran
+
 document.addEventListener('click', e => {
   if (!header.contains(e.target)) setMenu(false);
 });
@@ -448,12 +430,10 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Si la ventana se ensancha, el menú vuelve al modo escritorio
 desktopQuery.addEventListener('change', e => {
   if (e.matches) setMenu(false);
 });
 
-// 7.2 Sombra sutil cuando la página deja de estar arriba
 function onScroll() {
   header.classList.toggle('is-scrolled', window.scrollY > 8);
 }
