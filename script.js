@@ -152,7 +152,7 @@ const i18nData = {
     "nav.calculator": "Calculadora",
     "nav.verification": "Verificación",
     "nav.menu": "Abrir menú",
-    "btn.login": "Entrar",
+    "btn.login": "Iniciar sesión",
     "btn.register": "Registrarse",
     "role.driver": "Soy Conductor",
     "role.owner": "Soy Propietario",
