@@ -1,6 +1,4 @@
-
 'use strict';
-
 
 let currentLang = 'EN';
 let currentRole = 'driver';
@@ -126,6 +124,16 @@ const i18nData = {
     "footer.col1": "Navigation",
     "footer.col2": "Modules",
     "footer.col3": "Contact & Legal",
+    "footer.terms": "Terms & Conditions",
+    "terms.title": "Terms & Conditions",
+    "terms.sub1": "1. User Account & Security",
+    "terms.body1": "Welcome to Proyect-Park-Share. By accessing or using our platform, you agree to comply with and be bound by the following terms and conditions.",
+    "terms.body2": "Users must provide accurate information when registering. You are responsible for maintaining the confidentiality of your account credentials and all activities under your account.",
+    "terms.sub2": "2. Parking Reservations & Payments",
+    "terms.body3": "Bookings are subject to spot availability. Drivers agree to pay the calculated hourly rate, and parking owners agree to keep their available timeframes updated.",
+    "terms.sub3": "3. Verification & Compliance",
+    "terms.body4": "Both drivers and garage owners must complete document verification to ensure trust and security across the platform network.",
+    "terms.btnClose": "Accept & Close",
     "mod.bookings": "My Bookings",
     "mod.garages": "My Garages",
     "mod.earnings": "My Earnings",
@@ -253,6 +261,16 @@ const i18nData = {
     "footer.col1": "Navegación",
     "footer.col2": "Módulos",
     "footer.col3": "Contacto y Legal",
+    "footer.terms": "Términos y Condiciones",
+    "terms.title": "Términos y Condiciones",
+    "terms.sub1": "1. Cuenta de Usuario y Seguridad",
+    "terms.body1": "Bienvenido a Proyect-Park-Share. Al acceder o utilizar nuestra plataforma, aceptas cumplir y estar sujeto a los siguientes términos y condiciones.",
+    "terms.body2": "Los usuarios deben proporcionar información precisa al registrarse. Eres responsable de mantener la confidencialidad de tus credenciales y de las actividades en tu cuenta.",
+    "terms.sub2": "2. Reservas de Estacionamiento y Pagos",
+    "terms.body3": "Las reservas están sujetas a la disponibilidad del espacio. Los conductores aceptan pagar la tarifa por hora calculada y los propietarios se comprometen a mantener sus horarios actualizados.",
+    "terms.sub3": "3. Verificación y Cumplimiento",
+    "terms.body4": "Tanto los conductores como los propietarios de cocheras deben completar la verificación de documentos para garantizar la confianza y seguridad en la red.",
+    "terms.btnClose": "Aceptar y Cerrar",
     "mod.bookings": "Mis Reservas",
     "mod.garages": "Mis Cocheras",
     "mod.earnings": "Mis Ingresos",
@@ -261,7 +279,6 @@ const i18nData = {
     "btn.confirm": "Confirmar Reserva"
   }
 };
-
 
 const langToggleBtn = document.getElementById('lang-toggle-btn');
 const langEnLabel = document.getElementById('lang-en');
@@ -298,7 +315,6 @@ function updateLanguageUI() {
   updateCalculation();
 }
 
-
 function setRole(role) {
   currentRole = role;
   const isDriver = role === 'driver';
@@ -309,7 +325,6 @@ function setRole(role) {
   document.getElementById('hero-title').textContent = t[isDriver ? 'hero.driverTitle' : 'hero.ownerTitle'];
   document.getElementById('hero-desc').textContent = t[isDriver ? 'hero.driverDesc' : 'hero.ownerDesc'];
 }
-
 
 function updateCalculation() {
   const hours = parseInt(document.getElementById('calc-hours').value, 10);
@@ -324,7 +339,6 @@ function updateCalculation() {
     `S/. ${monthlyEarnings.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
-
 function highlightPin(id) {
   document.querySelectorAll('.map-pin').forEach(pin => { pin.style.transform = 'scale(1)'; });
   const activePin = document.getElementById(`pin-${id}`);
@@ -338,7 +352,6 @@ function triggerSearch() {
   const val = document.getElementById('search-input').value;
   showToast(currentLang === 'EN' ? `Searching garages in '${val}'...` : `Buscando cocheras en '${val}'...`);
 }
-
 
 let selectedGarageName = '';
 
@@ -397,7 +410,6 @@ function toggleFaq(el) {
   el.classList.toggle('active');
 }
 
-
 const header = document.getElementById('site-header');
 const nav = document.getElementById('primary-nav');
 const navToggle = document.getElementById('nav-toggle');
@@ -414,11 +426,9 @@ navToggle.addEventListener('click', () => {
   setMenu(navToggle.getAttribute('aria-expanded') !== 'true');
 });
 
-
 nav.addEventListener('click', e => {
   if (e.target.closest('a, button')) setMenu(false);
 });
-
 
 document.addEventListener('click', e => {
   if (!header.contains(e.target)) setMenu(false);
@@ -454,7 +464,7 @@ function setActiveLink(id) {
 if ('IntersectionObserver' in window) {
   const spy = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) setActiveLink(entry.target.id); // el hero no tiene id → limpia la selección
+      if (entry.isIntersecting) setActiveLink(entry.target.id);
     });
   }, { rootMargin: '-30% 0px -60% 0px' });
 

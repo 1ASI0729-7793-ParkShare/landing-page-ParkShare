@@ -305,14 +305,11 @@
           </div>
         </div>
 
-
-
       </div>
     </div>
   </section>
 
-  
-<!-- ==========================================================================
+  <!-- ==========================================================================
        PRICING & PLANS SECTION
        ========================================================================== -->
        
@@ -453,7 +450,6 @@
     </div>
   </section>
 
-
   <section class="verification-section" id="verification">
     <div class="container">
       <div style="text-align: center; max-width: 700px; margin: 0 auto;">
@@ -485,7 +481,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="team-section" id="team">
     <div class="container">
@@ -539,7 +534,6 @@
     </div>
   </section>
 
-
   <section class="faq-section">
     <div class="container">
       <h2 style="text-align: center; margin-bottom: var(--space-32);" data-i18n="faq.title">Frequently Asked Questions</h2>
@@ -564,7 +558,6 @@
     </div>
   </section>
 
- 
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -601,7 +594,7 @@
           <h4 data-i18n="footer.col3">Contact & Legal</h4>
           <ul>
             <li><a href="#">support@parkshare.pe</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#" onclick="event.preventDefault(); openModal('terms-modal');" data-i18n="footer.terms">Terms & Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Lima, Perú</a></li>
           </ul>
@@ -674,14 +667,29 @@
     </div>
   </div>
 
-      <!-- Toast Container -->
-      <div class="toast-container" id="toast-container"></div>
+  <!-- Terms & Conditions Modal -->
+  <div class="modal-overlay" id="terms-modal">
+    <div class="modal-box modal-lg">
+      <h3 style="margin-bottom: 16px; color: var(--color-primary-dark);" data-i18n="terms.title">Terms & Conditions</h3>
+      <div class="terms-content">
+        <p data-i18n="terms.body1">Welcome to Proyect-Park-Share. By accessing or using our platform, you agree to comply with and be bound by the following terms and conditions.</p>
+        <h4 style="margin: 12px 0 6px; color: var(--color-primary-dark);" data-i18n="terms.sub1">1. User Account & Security</h4>
+        <p data-i18n="terms.body2">Users must provide accurate information when registering. You are responsible for maintaining the confidentiality of your account credentials and all activities under your account.</p>
+        <h4 style="margin: 12px 0 6px; color: var(--color-primary-dark);" data-i18n="terms.sub2">2. Parking Reservations & Payments</h4>
+        <p data-i18n="terms.body3">Bookings are subject to spot availability. Drivers agree to pay the calculated hourly rate, and parking owners agree to keep their available timeframes updated.</p>
+        <h4 style="margin: 12px 0 6px; color: var(--color-primary-dark);" data-i18n="terms.sub3">3. Verification & Compliance</h4>
+        <p data-i18n="terms.body4">Both drivers and garage owners must complete document verification to ensure trust and security across the platform network.</p>
+      </div>
+      <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <button class="btn btn-primary" onclick="closeModal('terms-modal')" data-i18n="terms.btnClose">Accept & Close</button>
+      </div>
+    </div>
+  </div>
 
-       <!-- JavaScript (traducciones, calculadora, modales y navbar) -->
-      <script src="script.js" defer></script>
-  </body>
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript (traducciones, calculadora, modales y navbar) -->
+  <script src="script.js" defer></script>
+</body>
 </html>
-
-
-
-
